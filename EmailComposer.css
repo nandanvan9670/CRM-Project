@@ -1,0 +1,86 @@
+/* ----- EMAIL COMPOSER CONTAINER ----- */
+.email-composer-container {
+  max-width: 350px;
+  margin: 5px auto;
+  padding: 40px;
+  background: #ffffff;
+  color: rgb(20, 19, 19);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.email-composer-container h2 {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+}
+
+/* Inputs */
+.email-composer-container input,
+.email-composer-container select,
+.email-composer-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Focus effect */
+.email-composer-container input:focus,
+.email-composer-container textarea:focus,
+.email-composer-container select:focus {
+  border-color: #4e8cff;
+  box-shadow: 0 0 5px rgba(78, 140, 255, 0.4);
+}
+
+/* Textarea */
+.email-composer-container textarea {
+  height: 90px;
+  resize: none;
+}
+
+/* Button */
+.email-composer-container button {
+  padding: 10px;
+  margin-top: 5px;
+  background: #4e8cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.email-composer-container button:hover {
+  background: #2563eb;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .email-composer-container {
+    margin: 20px;
+    padding: 18px;
+  }
+
+  .email-composer-container h2 {
+    font-size: 20px;
+  }
+}
+
+/* TABLET RESPONSIVE */
+@media (max-width: 768px) {
+  .email-composer-container {
+    max-width: 90%;
+  }
+}

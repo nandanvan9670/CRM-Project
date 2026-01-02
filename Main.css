@@ -1,0 +1,674 @@
+
+/* ===================== RESET ===================== */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===================== GLOBAL BODY ===================== */
+body {
+  background: linear-gradient(135deg, #00081d, #764ba2);
+  color: #ffffff;
+}
+
+
+/* ===================== FORM STYLES ===================== */
+form {
+  background: #ffffff;
+  color: #000;
+  width: 380px;
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  max-width: 420px;
+  margin: 13px auto;
+}
+
+
+
+form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+form label {
+  display: block;
+  margin: 0px 0 1px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* ===================== TABLE ===================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+
+th {
+  background: rgba(0,0,0,0.25);
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Action Buttons */
+.delete-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.update-btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background: #2563eb;
+}
+
+/* ===================== TABS ===================== */
+.custom-tabs .nav-link {
+  font-weight: 500;
+}
+
+/* ===================== LINKS ===================== */
+a {
+  text-decoration: none;
+  color: #93c5fd;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dashboard-actions {
+    align-self: flex-end;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    width: 90%;
+    padding: 25px;
+  }
+}
+
+
+/* UPDATE TICKET */
+
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container */
+.ticket-form {
+  position: relative;
+  background: #ffffff;
+  color: #000;
+  padding: 20px 35px;
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* ❌ Cross Button */
+.ticket-form .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #e5e7eb;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ticket-form .close-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* Inputs */
+.ticket-form input,
+.ticket-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+.ticket-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  .ticket-form {
+    padding: 22px;
+  }
+
+  .ticket-form h2 {
+    font-size: 18px;
+  }
+}
+
+
+/* User Dashboard */
+
+/* ===================== BOOTSTRAP TABS FIX ===================== */
+
+.custom-tabs > .nav {
+  border-bottom: none !important;
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Tab item */
+.custom-tabs .nav-item {
+  margin-right: 6px;
+}
+
+/* Tab button */
+.custom-tabs .nav-link {
+  border: none !important;
+  color: #cccdd1 !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.custom-tabs .nav-link:hover {
+  background: #f3f4f6;
+  color: #111827 !important;
+}
+
+/* Active tab */
+.custom-tabs .nav-link.active {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff !important;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.4);
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 768px) {
+  .custom-tabs > .nav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+}
+
+
+
+/* General Body */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #28292b, #764ba2);
+    color: #ffffff;
+}
+
+/* Dashboard Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+h2 {
+    color: #575555;
+    margin-bottom: 30px;
+    font-weight: 700;
+
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    background-color: #4f46e5;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.tab:not(.active) {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Buttons */
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.delete-btn {
+    background-color: #EF4444;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: #DC2626;
+}
+
+.update-btn {
+    background-color: #3B82F6;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.update-btn:hover {
+    background-color: #2563EB;
+}
+
+
+.add-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 30px;
+    background-color: #667eea;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.add-btn:hover {
+    background-color: #5a67d8;
+}
+
+/* Back Button */
+.back-btn {
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tabs {
+        flex-wrap: wrap;
+    }
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .add-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* 
+.dashboard-container {
+  padding: 20px;
+  background: #020f57;
+} */
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.dashboard-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(121, 115, 115);
+}
+.Alllead{
+  color: white;
+}
+
+
+.crm-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.crm-table th {
+  background: #111827;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.crm-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.crm-table tr:hover {
+  background: #f9fafb;
+}
+
+.update-btn {
+  padding: 6px 14px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.page{
+  color: #28292b;
+}
+.pagination button {
+  padding: 6px 16px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Right buttons */
+.dashboard-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* ❌ Close Button */
+.close-btn {
+  background: #e9ecef;
+  border: none;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+/* ➕ Add Lead Button */
+.add-btn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #084298;
+}
+
+/* Tabs look */
+.custom-tabs .nav-link {
+  font-weight: 500;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dashboard-actions {
+    align-self: flex-end;
+  }
+}                                               
+
+
+
+
+/* ===================== CUSTOMER LIST TABLE ===================== */
+
+h2{
+  color: #6d6a6db6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+/* Table Header */
+thead {
+  background: #1f2937; /* dark CRM */
+}
+
+thead th {
+  padding: 14px;
+  text-align: left;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Table Body */
+tbody td {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Action Buttons */
+td button {
+  padding: 6px 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+td button:hover {
+  background: #1d4ed8;
+}
+
+/* ===================== RESPONSIVE TABLE ===================== */
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  thead th,
+  tbody td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+/* ===================== EMPTY STATE ===================== */
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
